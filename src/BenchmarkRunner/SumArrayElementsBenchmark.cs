@@ -30,6 +30,12 @@ namespace BenchmarkRunner
         }
 
         [Benchmark]
+        public void UsingArrayForEach()
+        {
+            _sumArrayElements.ArrayForEach(_sourceArray);
+        }
+
+        [Benchmark]
         public void UsingEnumerableSum()
         {
             _sumArrayElements.EnumerableSum(_sourceArray);

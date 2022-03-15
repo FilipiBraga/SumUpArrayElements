@@ -35,6 +35,14 @@ namespace Tests
         }
 
         [TestMethod]
+        public void GivenASouceArray_ThenSumUpTheArrayValuesUsingArrayForEach_ThenReturnTheResult()
+        {
+            var result = _sumArrayElements.ArrayForEach(sourceArray);
+
+            Assert.AreEqual(24, result);
+        }
+
+        [TestMethod]
         public void GivenASourceArray_ThenSumUpTheArrayValuesUsingEnumerableSum_ThenReturnTheResult()
         {
             var result = _sumArrayElements.EnumerableSum(sourceArray);

@@ -23,6 +23,11 @@ public class Program
 
         Console.WriteLine();
 
+        Console.WriteLine(" ---------- Using Array.ForEach");
+        Console.WriteLine($" Result: {_sumArrayElements.ArrayForEach(sourceArray)}");
+
+        Console.WriteLine();
+
         Console.WriteLine(" ---------- Using Enumerable.Sum");
         Console.WriteLine($" Result: {_sumArrayElements.EnumerableSum(sourceArray)}");
 
