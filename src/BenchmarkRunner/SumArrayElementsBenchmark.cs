@@ -11,6 +11,7 @@ namespace BenchmarkRunner
         private static int[] FillElements(int length)
         {
             var randomArray = new int[length];
+
             for (int i = 0; i < length; i++)
                 randomArray[i] = new Random().Next(0, 1000);
 

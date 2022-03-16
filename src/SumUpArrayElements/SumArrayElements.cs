@@ -5,6 +5,7 @@
         public int ForLoop(int[] sourceArray)
         {
             var result = 0;
+            
             for (int i = 0; i < sourceArray.Length; i++)
                 result += sourceArray[i];
 
@@ -14,6 +15,7 @@
         public int ForeachLoop(int[] sourceArray)
         {
             var result = 0;
+            
             foreach (var item in sourceArray)
                 result += item;
 
@@ -23,6 +25,7 @@
         public int ArrayForEach(int[] sourceArray)
         {
             var result = 0;
+            
             Array.ForEach(sourceArray, value => result += value);
 
             return result;
