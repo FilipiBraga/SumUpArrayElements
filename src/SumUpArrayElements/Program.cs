@@ -13,13 +13,13 @@ public class Program
 
         Console.WriteLine();
 
-        Console.WriteLine(" ---------- Using For Statement");
-        Console.WriteLine($" Result: {_sumArrayElements.ForStatement(sourceArray)}");
+        Console.WriteLine(" ---------- Using For Loop");
+        Console.WriteLine($" Result: {_sumArrayElements.ForLoop(sourceArray)}");
 
         Console.WriteLine();
 
-        Console.WriteLine(" ---------- Using Foreach Statement");
-        Console.WriteLine($" Result: {_sumArrayElements.ForeachStatement(sourceArray)}");
+        Console.WriteLine(" ---------- Using Foreach Loop");
+        Console.WriteLine($" Result: {_sumArrayElements.ForeachLoop(sourceArray)}");
 
         Console.WriteLine();
 
@@ -30,11 +30,6 @@ public class Program
 
         Console.WriteLine(" ---------- Using Enumerable.Sum");
         Console.WriteLine($" Result: {_sumArrayElements.EnumerableSum(sourceArray)}");
-
-        Console.WriteLine();
-
-        Console.WriteLine(" ---------- Using For Statement");
-        Console.WriteLine($" Result: {_sumArrayElements.ForStatement(sourceArray)}");
 
         Console.WriteLine();
 

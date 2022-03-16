@@ -19,17 +19,17 @@ namespace Tests
         }
 
         [TestMethod]
-        public void GivenASourceArray_ThenSumUpTheArrayValuesUsingForStatement_ThenReturnTheResult()
+        public void GivenASourceArray_ThenSumUpTheArrayValuesUsingForLoop_ThenReturnTheResult()
         {
-            var result = _sumArrayElements.ForStatement(sourceArray);
+            var result = _sumArrayElements.ForLoop(sourceArray);
 
             Assert.AreEqual(24, result);
         }
 
         [TestMethod]
-        public void GivenASouceArray_ThenSumUpTheArrayValuesUsingForeachStatement_ThenReturnTheResult()
+        public void GivenASouceArray_ThenSumUpTheArrayValuesUsingForeachLoop_ThenReturnTheResult()
         {
-            var result = _sumArrayElements.ForeachStatement(sourceArray);
+            var result = _sumArrayElements.ForeachLoop(sourceArray);
 
             Assert.AreEqual(24, result);
         }

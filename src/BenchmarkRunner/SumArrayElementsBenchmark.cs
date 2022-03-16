@@ -18,15 +18,15 @@ namespace BenchmarkRunner
         }
 
         [Benchmark]
-        public void UsingForStatement()
+        public void UsingForLoop()
         {
-            _sumArrayElements.ForStatement(_sourceArray);
+            _sumArrayElements.ForLoop(_sourceArray);
         }
 
         [Benchmark]
-        public void UsingForeachStatement()
+        public void UsingForeachLoop()
         {
-            _sumArrayElements.ForeachStatement(_sourceArray);
+            _sumArrayElements.ForeachLoop(_sourceArray);
         }
 
         [Benchmark]

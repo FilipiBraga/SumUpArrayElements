@@ -2,7 +2,7 @@
 {
     public class SumArrayElements
     {
-        public int ForStatement(int[] sourceArray)
+        public int ForLoop(int[] sourceArray)
         {
             var result = 0;
             for (int i = 0; i < sourceArray.Length; i++)
@@ -11,7 +11,7 @@
             return result;
         }
 
-        public int ForeachStatement(int[] sourceArray)
+        public int ForeachLoop(int[] sourceArray)
         {
             var result = 0;
             foreach (var item in sourceArray)
@@ -37,7 +37,7 @@
         {
             return sourceArray.Sum();
         }
-
+       
         public int Aggregate(int[] sourceArray)
         {
             return sourceArray.Aggregate((total, value) => total + value);
