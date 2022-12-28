@@ -15,5 +15,12 @@ jobs:
         run: dotnet restore src
       - name: Build
         run: dotnet build src --configuration Release
-      - name: Test
-        run: dotnet test src
+      - name: Test and generate coverage report
+        run: dotnet test src /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+      - name: Convert coverate report to lcov format
+        run: coverlet --merge=result/opencover.xml --output=result/coverage.lcov
+      - name: Upload coverage report to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+         file: results/coverage.lcov
+         token: ${{ secrets.CODECOV_TOKEN }}
