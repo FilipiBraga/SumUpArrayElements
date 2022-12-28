@@ -17,10 +17,9 @@ jobs:
         run: dotnet build src --configuration Release
       - name: Test and generate coverage report
         run: dotnet test src /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
-      - name: Convert coverage report to lcov format
-        run: coverlet --merge=result/opencover.xml --output=result/coverage.lcov
-      - name: Upload coverage report to Codecov
-        uses: codecov/codecov-action@v1
-        with:
-         file: results/coverage.lcov
-         token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Check code coverage
+        if: "coverage >= 80"
+        run: echo "Code coverage is satisfactory"
+      - name: "Fail if code coverage is too low
+        if: "coverage < 80"
+        run: exit 1
