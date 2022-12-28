@@ -16,7 +16,9 @@ jobs:
       - name: Build
         run: dotnet build src --configuration Release
       - name: Test and generate coverage report
-        run: dotnet test src /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=
+        run: dotnet test src /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+      - name: Install coverlet-coverage-report
+        run: dotnet tool install -g coverlet.console
       - name: Set up Python environment
         uses: actions/setup-python@v2
         with:
@@ -29,7 +31,7 @@ jobs:
           python -c "import coverage
 
           coverage_data = coverage.CoverageData()
-          coverage_data.read_file('/home/runner/work/SumUpArrayElements/SumUpArrayElements/src/Tests/coverage.opencover.xml')
+          coverage_data.read_file('/home/runner/work/SumUpArrayElements/SumUpArrayElements/src/Tests/coverage.opencover.xml') 
 
           total_statements = coverage_data.numbers().n_statements
           covered_statements = coverage_data.numbers().n_statements - coverage_data.numbers().n_missing
