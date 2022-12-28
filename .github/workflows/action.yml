@@ -21,7 +21,6 @@ jobs:
         run: dotnet tool install -g coverlet.console
       - name: Extract code coverage percentage
         run: |
-          coverlet-coverage-report -t opencover -f opencover -o coverage.json
           coverage=$(cat coverage.json | jq '.summary.totalPercentage')      
       - name: Check code coverage
         run: echo "coverage" 
