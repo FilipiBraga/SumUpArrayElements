@@ -31,7 +31,7 @@ jobs:
           python -c "import coverage
           
           with coverage.Coverage() as cov:
-            cov.load("/home/runner/work/SumUpArrayElements/SumUpArrayElements/src/Tests/coverage.opencover.xml")  
+            cov.load("src/Tests/coverage.opencover.xml")  
               
           total_statements = cov.data.numbers().n_statements
           covered_statements = cov.data.numbers().n_statements - cov.data.numbers().n_missing
