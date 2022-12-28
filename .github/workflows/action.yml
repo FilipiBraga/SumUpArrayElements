@@ -20,6 +20,6 @@ jobs:
       - name: Check code coverage
         if: "coverage >= 80"
         run: echo "Code coverage is satisfactory"
-      - name: "Fail if code coverage is too low
+      - name: Fail if code coverage is too low
         if: "coverage < 80"
         run: exit 1
