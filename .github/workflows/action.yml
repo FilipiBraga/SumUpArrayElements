@@ -17,6 +17,10 @@ jobs:
         run: dotnet build src --configuration Release
       - name: Test and generate coverage report
         run: dotnet test src /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+      - name: Extract code coverage percentage
+        run: |
+          coverlet-coverage-report -t opencover -f opencover -o coverage.json
+          coverage=$(cat coverage.json | jq '.summary.totalPercentage')      
       - name: Check code coverage
         if: "coverage >= 80"
         run: echo "Code coverage is satisfactory"
