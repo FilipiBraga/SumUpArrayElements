@@ -22,5 +22,4 @@ jobs:
       - name: Extract code coverage percentage
         run: |
           coverage=$(80)
-      - name: Check code coverage
-        run: echo "coverage: $coverage" 
+          echo "coverage: $coverage"
