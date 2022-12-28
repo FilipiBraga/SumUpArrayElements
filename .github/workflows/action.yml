@@ -29,18 +29,17 @@ jobs:
       - name: Check code coverage percentage
         run: |
           python -c "import coverage
-
-          coverage_data = coverage.CoverageData()
-          coverage_data.read_file('/home/runner/work/SumUpArrayElements/SumUpArrayElements/src/Tests/coverage.opencover.xml') 
-
-          total_statements = coverage_data.numbers().n_statements
-          covered_statements = coverage_data.numbers().n_statements - coverage_data.numbers().n_missing
+          
+          with coverage.Coverage() as cov:
+            cov.load("/home/runner/work/SumUpArrayElements/SumUpArrayElements/src/Tests/coverage.opencover.xml")  
+              
+          total_statements = cov.data.numbers().n_statements
+          covered_statements = cov.data.numbers().n_statements - cov.data.numbers().n_missing
           coverage_percent = covered_statements / total_statements
-
+          print(f'Code coverage is {coverage_percent * 100:.2f}%')
           if coverage_percent < 0.8:
             print(f'Code coverage is below threshold: {coverage_percent * 100:.2f}%')
             exit(1)
           else:
             print(f'Code coverage is satisfactory: {coverage_percent * 100:.2f}%')"
-
           
