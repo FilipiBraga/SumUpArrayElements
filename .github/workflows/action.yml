@@ -21,7 +21,8 @@ jobs:
         run: dotnet tool install -g coverlet.console
       - name: Extract code coverage percentage
         run: |
-          coverage=$(cat src\\tests\\coverage.json | jq '.summary.totalPercentage')
+          cd src/tests
+          coverage=$(cat coverage.json | jq '.summary.totalPercentage')
           echo "$coverage"
-          ls
+          ls 
           
