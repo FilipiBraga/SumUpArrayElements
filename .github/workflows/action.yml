@@ -57,4 +57,4 @@ jobs:
           dotnet tool install -g dotnet-sonarscanner
           dotnet-sonarscanner begin /k:"FilipiBraga_SumUpArrayElements" /o:"filipibc" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build --configuration Release
-          dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}
+          dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
