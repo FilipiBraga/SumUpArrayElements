@@ -1,0 +1,140 @@
+{
+  "SumUpArrayElements.dll": {
+    "C:\\Users\\filip\\Desktop\\Code-Maze\\SumUpArrayElements\\src\\SumUpArrayElements\\Program.cs": {
+      "SumUpArrayElements.Program": {
+        "System.Void SumUpArrayElements.Program::Main(System.String[])": {
+          "Lines": {
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "14": 1,
+            "16": 1,
+            "17": 1,
+            "19": 1,
+            "21": 1,
+            "22": 1,
+            "24": 1,
+            "26": 1,
+            "27": 1,
+            "29": 1,
+            "31": 1,
+            "32": 1,
+            "34": 1,
+            "36": 1,
+            "37": 1,
+            "39": 1,
+            "41": 1,
+            "42": 1,
+            "44": 1,
+            "45": 1,
+            "47": 1,
+            "48": 1
+          },
+          "Branches": []
+        },
+        "System.Void SumUpArrayElements.Program::.cctor()": {
+          "Lines": {
+            "5": 1,
+            "6": 1,
+            "7": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\filip\\Desktop\\Code-Maze\\SumUpArrayElements\\src\\SumUpArrayElements\\SumArrayElements.cs": {
+      "SumUpArrayElements.SumArrayElements": {
+        "System.Int32 SumUpArrayElements.SumArrayElements::ForLoop(System.Int32[])": {
+          "Lines": {
+            "6": 2,
+            "7": 2,
+            "9": 36,
+            "10": 16,
+            "12": 2,
+            "13": 2
+          },
+          "Branches": [
+            {
+              "Line": 9,
+              "Offset": 25,
+              "EndOffset": 7,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 16
+            },
+            {
+              "Line": 9,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Int32 SumUpArrayElements.SumArrayElements::ForeachLoop(System.Int32[])": {
+          "Lines": {
+            "16": 2,
+            "17": 2,
+            "19": 38,
+            "20": 16,
+            "22": 2,
+            "23": 2
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 26,
+              "EndOffset": 10,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 16
+            },
+            {
+              "Line": 19,
+              "Offset": 26,
+              "EndOffset": 28,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Int32 SumUpArrayElements.SumArrayElements::ArrayForEach(System.Int32[])": {
+          "Lines": {
+            "26": 2,
+            "27": 2,
+            "29": 18,
+            "31": 2,
+            "32": 2
+          },
+          "Branches": []
+        },
+        "System.Int32 SumUpArrayElements.SumArrayElements::EnumerableSum(System.Int32[])": {
+          "Lines": {
+            "35": 2,
+            "36": 2,
+            "37": 2
+          },
+          "Branches": []
+        },
+        "System.Int32 SumUpArrayElements.SumArrayElements::ArraySum(System.Int32[])": {
+          "Lines": {
+            "40": 2,
+            "41": 2,
+            "42": 2
+          },
+          "Branches": []
+        },
+        "System.Int32 SumUpArrayElements.SumArrayElements::Aggregate(System.Int32[])": {
+          "Lines": {
+            "45": 2,
+            "46": 16,
+            "47": 2
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
