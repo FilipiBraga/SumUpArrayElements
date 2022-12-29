@@ -16,30 +16,5 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release
       - name: Test and generate coverage report
-        run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
-      - name: Install coverlet-coverage-report
-        run: dotnet tool install -g coverlet.console
-      - name: Set up Python environment
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
-      - name: Install coverage library
-        run: |
-          python -m pip install coverage
-      - name: Check code coverage percentage
-        run: |
-          python -c "import coverage
-          
-          with coverage.Coverage() as cov:
-            cov.load("coverage.opencover.xml")  
-              
-          total_statements = cov.data.numbers().n_statements
-          covered_statements = cov.data.numbers().n_statements - cov.data.numbers().n_missing
-          coverage_percent = covered_statements / total_statements
-          print(f'Code coverage is {coverage_percent * 100:.2f}%')
-          if coverage_percent < 0.8:
-            print(f'Code coverage is below threshold: {coverage_percent * 100:.2f}%')
-            exit(1)
-          else:
-            print(f'Code coverage is satisfactory: {coverage_percent * 100:.2f}%')"
+        run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover 
           
