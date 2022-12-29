@@ -39,7 +39,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          dotnet sonarscanner begin /k:"FilipiBraga_SumUpArrayElements" /o:"filipibc" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
+          dotnet tool install --global dotnet-sonarscanner
+          dotnet sonarscanner begin /k:"FilipiBraga_SumUpArrayElements" /o:"filipibc" /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
           dotnet build --no-incremental
           dotnet-coverage collect 'dotnet test' -f xml  -o 'coverage.xml'
           dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
