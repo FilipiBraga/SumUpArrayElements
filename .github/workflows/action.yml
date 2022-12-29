@@ -58,3 +58,4 @@ jobs:
           dotnet build --configuration Release
           dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
           echo "SONAR CLOUD RESULT ====> SONAR_EXIT_CODE"
+          echo SONAR_EXIT_CODE
