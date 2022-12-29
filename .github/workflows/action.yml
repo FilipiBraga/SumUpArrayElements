@@ -54,8 +54,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: pwsh
         run: |
-          New-Item -Path .\.sonar\scanner -ItemType Directory
-          dotnet tool install -g dotnet-sonarscanner --tool-path .\.sonar\scanner
+          dotnet tool install -g dotnet-sonarscanner
           dotnet-sonarscanner begin /k:"FilipiBraga_SumUpArrayElements" /o:"filipibc" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build --configuration Release
           dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"        
