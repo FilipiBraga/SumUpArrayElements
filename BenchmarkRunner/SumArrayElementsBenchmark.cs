@@ -1,8 +1,10 @@
 ﻿using BenchmarkDotNet.Attributes;
 using SumUpArrayElements;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BenchmarkRunner
 {
+    [ExcludeFromCodeCoverage]
     public class SumArrayElementsBenchmark
     {
         private static readonly int[] _sourceArray = FillElements(1000 * 100);
